@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Conservador - Hacia un Futuro de Orden y Valores</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#inicio" class="logo">
+                <img src="logo.jpg" alt="Logo del Partido Conservador">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#quienes-somos">Quiénes  Somos</a></li>
+                <li><a href="#nuestras-propuestas">Propuestas</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="../noticias/menu_noticias/menu_noticias.html">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="../login/login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <video class="hero-bg-video" src="video.mp4" autoplay loop muted playsinline></video>
+        <div class="hero-content">
+            <h1>Por la Tradición y el Futuro</h1>
+            <p>Unidos por los valores que construyen una sociedad sólida y próspera. Conoce nuestras propuestas para un mejor país.</p>
+            <a href="#nuestras-propuestas" class="btn btn-primary" id="marketing-btn">Conoce Nuestras Propuestas</a>
+            
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="section">
+        <h2 class="section-title quienes-title-anim">Quiénes Somos</h2>
+        <div class="content-wrapper">
+            <p class="quienes-anim">Somos un partido político que defiende los principios de <b>libertad, orden y justicia social</b>. Creemos en la importancia de la <b>familia</b> como núcleo de la sociedad, la <b>propiedad privada</b> como motor de la economía y la <b>tradición</b> como guía para el progreso.</p>
+            <p class="quienes-anim">Nuestro compromiso es trabajar por un país estable, seguro y con oportunidades para todos, respetando siempre la historia y los valores que nos han hecho grandes.</p>
+        </div>
+    </section>
+
+    <section id="nuestras-propuestas" class="section bg-light-gray">
+        <h2 class="section-title propuestas-title-anim">Nuestras Propuestas</h2>
+        <div class="proposals-grid">
+            <div class="proposal-card propuesta-anim">
+                <div class="propuesta-icon propuesta-icon-eco">💼</div>
+                <h3>Economía Sostenible</h3>
+                <p>Promovemos políticas fiscales responsables que incentiven la inversión, generen empleo y fortalezcan la iniciativa privada.</p>
+            </div>
+            <div class="proposal-card propuesta-anim">
+                <div class="propuesta-icon propuesta-icon-edu">🎓</div>
+                <h3>Educación de Calidad</h3>
+                <p>Defendemos una educación basada en el mérito, que transmita valores cívicos y prepare a las nuevas generaciones para el futuro.</p>
+            </div>
+            <div class="proposal-card propuesta-anim">
+                <div class="propuesta-icon propuesta-icon-seg">🛡️</div>
+                <h3>Seguridad Ciudadana</h3>
+                <p>Nuestra prioridad es garantizar la tranquilidad de las familias, fortaleciendo a las instituciones de seguridad y justicia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias" class="section">
+        <h2 class="section-title">Últimas Noticias</h2>
+        <div class="noticias-extra">
+            <div class="noticias-carousel noticias-anim">
+                <div class="carousel-card" id="carousel-card">
+                    <img src="../home/image.png" alt="Noticia destacada" id="carousel-img">
+                    <div class="carousel-caption" id="carousel-caption">Reunión con líderes empresariales para impulsar la recuperación económica.</div>
+                </div>
+            </div>
+            <div class="noticias-info">
+                <h3 class="noticias-subtitle noticias-anim" id="noticias-subtitle">Actualidad y Eventos</h3>
+                <p class="noticias-desc noticias-anim" id="noticias-desc">Mantente informado sobre las acciones, logros y actividades más recientes del Partido Conservador. Aquí compartimos noticias relevantes, jornadas sociales y encuentros con la comunidad y el sector empresarial.</p>
+            </div>
+        </div>
+        <div class="news-list">
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-light-gray">
+        <h2 class="section-title">Contacto</h2>
+        <p>¿Quieres unirte a nuestro movimiento o tienes alguna pregunta? Contáctanos a través de nuestros canales.</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:info@partidoconservador.com">info@partidoconservador.com</a></p>
+            <p>Teléfono: +57 311 123 4567</p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Partido Conservador. Todos los derechos reservados.</p>
+            <p>Síguenos en las redes sociales</p>
+            </div>
+    </footer>
+
+    <script src="nav-efecto.js"></script>
+    <script src="js/estilo.js"></script>
+    <script src="efectos-home.js"></script>
+    <script src="efectos-propuestas.js"></script>
+    <script src="efectos-noticias.js"></script>
+</body>
+</html>

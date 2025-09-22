@@ -1,0 +1,49 @@
+CONTEXTO:
+
+ADMINISTRACION
+
+	CREA:
+		TRABAJDOR:CRUD		
+				DATOS:
+					correo
+					contrasena
+					NOMBRE
+					1. APRELLIDO
+					1.2 APELLIDO
+					3.EDAD
+					4. CEDULA
+					5: redes:
+                                     6: 
+							5.1:INSTGRAM
+							5.2:FACEBOOK
+							5.3
+							5.4
+
+
+UN TRABAJDOR TIENE SU PANEL SU HTML Y CSS
+
+EL TRABAJDOR ES UN ENCUESTADOR QUE REUNE DATOS DE MANERA CONSENTIDA A AMIGOS TALES COMO:
+
+
+NOMBRE
+					1. APRELLIDO
+					1.2 APELLIDO
+					3.EDAD
+					4. CEDULA
+					5: redes:
+                                     6: 
+							5.1:INSTGRAM
+							5.2:FACEBOOK
+					firmo opcion ture y false empieza en false
+
+
+
+
+
+
+
+
+
+
+
+								

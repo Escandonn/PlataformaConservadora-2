@@ -1,0 +1,286 @@
+/* =========================================================================
+   Paleta de Colores
+   Azul Marino: #1A237E
+   Blanco: #FFFFFF
+   Gris Claro: #F5F5F5
+   Gris Oscuro: #424242
+   Dorado/Mostaza: #C9A646
+   Azul Claro (Hover): #3949AB
+   ========================================================================= */
+
+/* =========================================================================
+   Estilos Generales
+   ========================================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #424242;
+    background-color: #F5F5F5;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #1A237E;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1A237E;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #C9A646;
+    margin: 10px auto 0;
+}
+
+/* =========================================================================
+   HEADER / NAVEGACIÓN
+   ========================================================================= */
+
+.main-header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #424242;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #1A237E;
+}
+
+.login-btn {
+    background-color: #C9A646;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #1A237E;
+}
+
+/* =========================================================================
+   SECCIÓN HERO
+   ========================================================================= */
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image.png');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #C9A646;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #1A237E;
+}
+
+/* =========================================================================
+   SECCIONES DE CONTENIDO
+   ========================================================================= */
+
+.bg-light-gray {
+    background-color: #F5F5F5;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-wrapper p {
+    font-size: 1.1rem;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+/* Propuestas */
+.proposals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.proposal-card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proposal-card:hover {
+    transform: translateY(-5px);
+}
+
+.proposal-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #1A237E;
+    margin-bottom: 10px;
+}
+
+/* Noticias */
+.news-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.news-item h3 a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #1A237E;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.news-item h3 a:hover {
+    color: #C9A646;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #424242;
+}
+
+/* Contacto */
+.contact-info {
+    font-size: 1.1rem;
+}
+
+/* =========================================================================
+   FOOTER
+   ========================================================================= */
+
+.main-footer {
+    background-color: #1A237E;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Navbar: 3 links arriba, 3 abajo en pantallas pequeñas */
+/* filepath: c:\Users\Administrador\Desktop\proyecto_derecho\PlataformaConservadora\home\estilos.css */
+@media (max-width: 800px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+    .logo {
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px 15px;
+        width: 100%;
+        justify-items: center;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}

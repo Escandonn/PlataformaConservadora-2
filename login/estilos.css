@@ -1,0 +1,65 @@
+/* =========================================================================
+   Paleta de Colores
+   =========================================================================
+   Azul Marino: #1A237E
+   Blanco: #FFFFFF
+   Gris Claro: #F5F5F5
+   Gris Oscuro: #424242
+   Dorado/Mostaza: #C9A646
+   Azul Claro (Hover): #3949AB
+   ========================================================================= */
+
+/* =========================================================================
+   Estilos Generales
+   ========================================================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  margin: 0;
+}
+
+.login-box {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #1A237E;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #1A237E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3949AB;
+}
+
+p {
+  color: red;
+}

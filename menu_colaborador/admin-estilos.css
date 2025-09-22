@@ -1,0 +1,313 @@
+/* =========================================================================
+   Estilos Generales del Panel de Administración
+   ========================================================================= */
+
+:root {
+    --color-primary: #1A237E; /* Azul Marino */
+    --color-secondary: #C9A646; /* Dorado/Mostaza */
+    --color-bg: #F5F5F5; /* Gris Claro */
+    --color-text: #424242; /* Gris Oscuro */
+    --color-white: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+/* =========================================================================
+   HEADER / NAVEGACIÓN FIJA - MEJORADO PARA RESPONSIVE
+   ========================================================================= */
+
+.admin-header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: space-between; /* Alinear a los extremos en escritorio */
+    align-items: center;
+    flex-wrap: wrap; /* Permite salto de línea en móviles */
+}
+
+.admin-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.admin-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav-links li a {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.admin-nav-links li a:hover {
+    color: var(--color-secondary);
+}
+
+.logout-btn {
+    background-color: var(--color-secondary);
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: var(--color-primary);
+}
+
+/* =========================================================================
+   CONTENIDO PRINCIPAL
+   ========================================================================= */
+
+.admin-main {
+    padding-top: 100px; /* Ajusta el espacio por header fijo */
+    padding: 100px 40px 40px;
+}
+
+.admin-section {
+    background-color: var(--color-white);
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.admin-subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.admin-subtitle::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin-top: 10px;
+}
+
+.admin-intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-bg);
+    padding: 20px;
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.admin-form .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-primary);
+}
+
+.data-search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+.data-search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-search {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tabla Responsive */
+.data-table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-action {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-action.edit {
+    background-color: #2196F3;
+}
+
+.btn-action.delete {
+    background-color: #F44336;
+}
+
+/* =========================================================================
+   MEDIA QUERIES PARA RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    .admin-header {
+        padding: 20px;
+    }
+    
+    .admin-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px; /* Menos espacio vertical en móviles */
+    }
+
+    .admin-nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .admin-nav-links li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .logout-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .admin-main {
+       padding: -40px 20px 20px; /* ya no necesitas el doble */
+    }
+    
+    .admin-section {
+        padding: 20px;
+    }
+    
+    .admin-title {
+        font-size: 2rem;
+    }
+    
+    .admin-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .info-cards,
+    .data-search-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .data-search-bar input,
+    .btn-search {
+        width: 100%;
+    }
+}

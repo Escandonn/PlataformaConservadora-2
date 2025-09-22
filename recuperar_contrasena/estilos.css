@@ -1,0 +1,107 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #424242; /* Gris oscuro para el texto principal */
+}
+
+/* Contenedor principal para centrar el formulario */
+.password-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Caja del formulario */
+.password-box {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #1A237E; /* Borde superior azul para destacar */
+}
+
+/* Estilo del logo */
+.logo {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/* Título principal del formulario */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A237E;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos de los grupos de formulario (etiqueta + input) */
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #424242;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="password"]:focus {
+    border-color: #C9A646; /* Borde dorado al enfocar */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(201, 166, 70, 0.2);
+}
+
+/* Botón de guardar y continuar */
+.submit-btn-form {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #1A237E; /* Azul marino */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn-form:hover {
+    background-color: #12195f; /* Un azul un poco más oscuro al pasar el cursor */
+}
+
+/* Enlace para volver al login */
+.back-login {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #1A237E;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-login:hover {
+    color: #C9A646; /* Dorado al pasar el cursor */
+    text-decoration: underline;
+}

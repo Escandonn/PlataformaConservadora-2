@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Plataforma Conservadora</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="admin-estilos.css">
+</head>
+<body>
+    
+    <header class="admin-header">
+        <nav class="admin-nav">
+            <a href="admin-index.html" class="admin-logo">
+                Panel de Administración
+            </a>
+            <ul class="admin-nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#crear-colaborador">Crear Colaborador</a></li>
+                <li><a href="#visualizacion-datos">Visualización de Datos</a></li>
+                <li><a href="login.html" class="logout-btn">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section id="crear-colaborador" class="admin-section">
+            <h2>Crear Trabajador</h2>
+            <form id="form-trabajador">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="text" id="apellidos2" placeholder="Segundo Apellido" required>
+                <input type="text" id="cedula" placeholder="Cédula" required>
+                <input type="email" id="correo" placeholder="Correo" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <button type="submit">Crear</button>
+            </form>
+        </section>
+        <section id="visualizacion-datos" class="admin-section">
+            <h2>Trabajadores Registrados</h2>
+            <input type="text" id="busqueda" placeholder="Buscar por cédula o nombre">
+            <button onclick="buscar()">Buscar</button>
+            <table id="tabla-trabajadores">
+                <thead>
+                    <tr>
+                        <th>Nombre</th><th>Apellido</th><th>Segundo Apellido</th><th>Cédula</th><th>Correo</th><th>Firmó</th><th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="estadisticas"></div>
+        </section>
+    </main>
+    <script src="logica.js"></script>
+    <script>
+// Renderizar tabla y estadísticas
+function renderTabla(lista) {
+    const tbody = document.querySelector('#tabla-trabajadores tbody');
+    tbody.innerHTML = '';
+    lista.forEach(t => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${t.nombre}</td><td>${t.apellido}</td><td>${t.apellidos2}</td><td>${t.cedula}</td><td>${t.correo}</td><td>${t.yaFirmo ? 'Sí' : 'No'}</td><td><button onclick="eliminar(${t.id})">Eliminar</button></td>`;
+        tbody.appendChild(tr);
+    });
+}
+function renderEstadisticas() {
+    document.getElementById('estadisticas').innerText = `Total firmados: ${contarFirmados()}`;
+}
+function buscar() {
+    const val = document.getElementById('busqueda').value;
+    let lista = leerTrabajadores();
+    if (val) lista = buscarTrabajador({ cedula: val, nombre: val });
+    renderTabla(lista);
+}
+function eliminar(id) {
+    eliminarTrabajador(id);
+    renderTabla(leerTrabajadores());
+    renderEstadisticas();
+}
+document.getElementById('form-trabajador').onsubmit = function(e) {
+    e.preventDefault();
+    crearTrabajador({
+        nombre: nombre.value,
+        apellido: apellido.value,
+        apellidos2: apellidos2.value,
+        cedula: cedula.value,
+        correo: correo.value,
+        contrasena: contrasena.value
+    });
+    renderTabla(leerTrabajadores());
+    renderEstadisticas();
+    this.reset();
+};
+window.onload = function() {
+    renderTabla(leerTrabajadores());
+    renderEstadisticas();
+};
+    </script>
+</body>
+</html>
